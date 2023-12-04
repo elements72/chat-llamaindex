@@ -155,7 +155,7 @@ export default function ChatInput(props: ChatInputProps) {
     if (isURL(input)) {
       setTemporaryURLInput(input);
     }
-    await callLLM({ input, fileDetail: imageFile });
+    await console.log("TEST SEND BUTTIO", input)//callLLM({ input, fileDetail: imageFile });
     if (!isMobileScreen) inputRef.current?.focus();
     setAutoScroll(true);
   };
