@@ -7,14 +7,14 @@ fi
 case $1 in
     "run")
         # Run the docker container
-        docker run -v ./:/src/ -d -p 3000:3000 --name llamaindex-container llamaindex 
+        docker run  -v ./:/src/ -d -it -p 37331:37331  --name llamaindex-container llamaindex
         ;;
     "exec")
         # Execute the models inside the docker container
         docker exec -it llamaindex-container bash      
         ;;
     "build")
-        # Build the dockers
+        # Build the docker
         docker build ./ -t llamaindex
         ;;
     "remove")

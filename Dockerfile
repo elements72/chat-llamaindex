@@ -1,3 +1,4 @@
+
 FROM node:latest
  
 # Create app directory
@@ -7,8 +8,6 @@ WORKDIR ./src
 # Copy files
 COPY . .
  
-RUN npm install -g
+RUN npm install -g npm
 
 # Add your application code here
-
-CMD python3 -m http.server
